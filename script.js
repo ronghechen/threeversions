@@ -7,7 +7,7 @@ window.addEventListener("load", () => {
         bio: "nu cs alum | software engineer | dark mode enthusiast",
         img: "swe.png",
         captions: [
-          "I am majoring in comouter science with a software engineering concentration, and have held a software engineering internship at a startup.",
+          "I am majoring in computer science with a software engineering concentration, and have held a software engineering internship at a startup.",
           "However, if this project wasn't any indication, I'm not a fan of algorithmic puzzles and enjoy building the user-facing side of the product, like coding a drop shadow on a button or an eye-catching loading animation."
         ]
       },
