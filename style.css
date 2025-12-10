@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: url("bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  min-height: 100vh;
+}
+
+#loading-screen {
+  position: fixed;
+  inset: 0; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  font-family: "Courier New", monospace;
+  font-size: 2.2rem;
+  letter-spacing: 0.12em;
+  text-transform: lowercase;
+  opacity: 1;
+  transition: opacity 0.8s ease;
+  z-index: 10;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#carousel.show {
+  opacity: 1;
+}
+
+#carousel {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+  opacity: 0; 
+  transition: opacity 0.8s ease;
+}
+
+button {
+  background: rgba(255, 255, 255, 0.25); 
+  backdrop-filter: blur(6px); 
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  color: white;
+  font-size: 2rem;
+  padding: 1rem 1.2rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.carousel-slide {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  max-width: 900px;
+}
+
+#feed-image {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.85);
+}
+
+#caption-box {
+  max-width: 420px;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 1.3rem 1.7rem;
+  border-radius: 1.4rem;
+  backdrop-filter: blur(12px);
+}
+
+#caption-box h2 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+#caption-box p {
+  font-size: 0.98rem;
+  margin: 0.4rem 0 0.8rem 0;
+  opacity: 0.9;
+}
+
+#captions {
+  padding-left: 1.1rem;
+  margin: 0;
+}
+
+#captions li {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  #carousel {
+    padding: 1.5rem;
+  }
+
+  .carousel-slide {
+    flex-direction: column;
+  }
+
+  #feed-image {
+    max-width: 220px;
+  }
+
+  #caption-box {
+    max-width: 100%;
+  }
+}
